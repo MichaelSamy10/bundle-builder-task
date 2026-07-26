@@ -7,12 +7,7 @@ export default function ProductCard() {
           Save 22%
         </span>
         {/* Product image */}
-        <img
-          src="./Wyze_Cam_V4_01.0001.png.png"
-          alt=""
-          width={100}
-          height={137}
-        />
+        <img src="./Wyze_Cam_V4_01.0001.png" alt="" width={100} height={137} />
       </div>
       <div className="flex flex-col gap-2.5">
         {/* Title */}

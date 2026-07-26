@@ -75,7 +75,7 @@ function App() {
                   {step < 4 && (
                     <button
                       onClick={() => setOpenStep(step + 1)}
-                      className="rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
+                      className="mx-auto mt-3.5 block font-semibold rounded-lg border-2 px-6 py-1 text-indigo-700 cursor-pointer"
                     >
                       Next: {steps[index + 1].title}
                     </button>
