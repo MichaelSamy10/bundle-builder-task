@@ -28,16 +28,18 @@ export default function ReviewPanel({
   const savings = Math.max(0, compareAt - total);
 
   return (
-    <aside className="mt-3 sticky top-6 rounded-lg bg-[#f0f5ff] p-5 max-[760px]:static max-[760px]:w-full">
-      <span className="block text-[11px] font-bold uppercase tracking-[.15em] text-[#6b6877]">
+    <aside className="mt-3 sticky top-6 rounded-lg bg-[#f0f5ff] p-5 max-[760px]:static max-[760px]:w-full max-[400px]:rounded-none max-[400px]:mt-0">
+      <span className="block text-xs uppercase tracking-widest text-[#484848]">
         Review
       </span>
-      <h1 className="mt-5 mb-1 text-[22px] font-bold">Your security system</h1>
-      <p className="m-0 text-sm text-[#6b6877]">
+      <h1 className="mt-5 mb-1.5 text-xl font-semibold">
+        Your security system
+      </h1>
+      <p className="text-sm text-[#6b6877]">
         Review your personalized protection system designed to keep what matters
         most safe.
       </p>
-      <div className="mt-6 border-t border-[#cfd5e1]">
+      <div className="mt-2.5 border-t border-[#cfd5e1]">
         {headings.map(([category, heading]) => {
           const lines = products.flatMap((product) =>
             product.category !== category

@@ -26,7 +26,7 @@ export default function ProductCard({
   const togglePlan = () => onChange(key, quantity > 0 ? -quantity : 1);
   return (
     <article
-      className={`relative flex min-h-52 items-center gap-4 rounded-lg border bg-white p-2.5 ${total > 0 ? "border-2 border-primary" : "border-0"} ${isPlan ? "cursor-pointer" : ""} max-[760px]:min-h-0 max-[420px]:items-start max-[420px]:gap-2 max-[420px]:p-2.5`}
+      className={`relative flex min-h-40 items-center gap-4 rounded-lg border bg-white p-2.5 ${total > 0 ? "border-2 border-primary" : "border-0"} ${isPlan ? "cursor-pointer" : ""} max-[760px]:min-h-0 max-[420px]:items-start max-[420px]:gap-2 max-[420px]:p-2.5`}
       onClick={isPlan ? togglePlan : undefined}
       onKeyDown={
         isPlan

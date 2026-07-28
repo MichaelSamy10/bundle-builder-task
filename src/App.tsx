@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { Triangle } from "lucide-react";
 import { products, stepMeta, type Category } from "./data/products";
 import ProductCard from "./components/product-card";
 import ReviewPanel from "./components/review-panel";
@@ -77,7 +77,7 @@ function App() {
     );
 
   return (
-    <main className="mx-auto grid max-w-360 grid-cols-[minmax(0,1fr)_410px] items-start gap-9 px-16 py-12 max-[1100px]:grid-cols-[minmax(0,1fr)_350px] max-[1100px]:gap-5 max-[1100px]:px-7 max-[760px]:flex max-[760px]:flex-col max-[760px]:gap-5 max-[760px]:p-4">
+    <main className="mx-auto grid max-w-360 grid-cols-[minmax(0,1fr)_410px] items-start gap-9 px-16 py-12 max-[1100px]:grid-cols-[minmax(0,1fr)_350px] max-[1100px]:gap-5 max-[1100px]:px-7 max-[760px]:flex max-[760px]:flex-col max-[760px]:gap-5 max-[400px]:p-0 max-[400px]:items-stretch max-[400px]:gap-0">
       <section className="min-w-0" aria-label="Security system builder">
         {stepMeta.map((step, index) => {
           const number = index + 1,
@@ -87,7 +87,7 @@ function App() {
             );
           return (
             <section
-              className={`border-b border-[#dddbe1] ${open ? "my-3 overflow-hidden rounded-lg border-0 bg-[#f0f5ff]" : ""}`}
+              className={`border-b border-[#dddbe1] max-[400px]:mt-0 ${open ? "my-3 overflow-hidden rounded-lg max-[400px]:rounded-none border-0 bg-[#f0f5ff]" : ""}`}
               key={step.category}
             >
               <button
@@ -95,12 +95,12 @@ function App() {
                 onClick={() => setOpenStep(open ? 0 : number)}
                 aria-expanded={open}
               >
-                <span className="block text-[11px] font-bold uppercase tracking-[.15em] text-[#6b6877]">
+                <span className="block text-xs uppercase tracking-widest text-[#484848]">
                   Step {number} of 4
                 </span>
                 <span className="my-3 -mx-6 block h-px bg-[#dcdbe1] max-[760px]:-mx-4.25" />
                 <span className="flex items-center justify-between gap-4">
-                  <span className="flex items-center gap-3 text-[21px] font-bold max-[760px]:text-[17px]">
+                  <span className="flex items-center gap-3 text-2xl font-semibold">
                     <img
                       className="h-7 w-7 object-contain"
                       src={step.icon}
@@ -110,11 +110,19 @@ function App() {
                   </span>
                   <span className="flex items-center gap-2 text-[#4e27a8]">
                     {open && (
-                      <em className="text-sm font-bold not-italic">
+                      <span className="text-sm">
                         {selectedCount(step.category)} selected
-                      </em>
+                      </span>
                     )}
-                    {open ? <ChevronUp /> : <ChevronDown />}
+                    {open ? (
+                      <Triangle size={10} fill="#4E2FD2" />
+                    ) : (
+                      <Triangle
+                        size={10}
+                        fill="#4E2FD2"
+                        className="rotate-180"
+                      />
+                    )}
                   </span>
                 </span>
               </button>
@@ -141,7 +149,7 @@ function App() {
                   </div>
                   {number < 4 && (
                     <button
-                      className="mx-auto mt-3.5 block rounded-[7px] border-2 border-primary bg-white hover:bg-gray-300/50 transition-all px-6 py-2 text-sm font-bold text-primary"
+                      className="mx-auto mt-3.5 block rounded-[7px] border border-primary hover:bg-gray-300/50 transition-all px-6 py-2 text-lg font-semibold text-primary"
                       onClick={() => setOpenStep(number + 1)}
                     >
                       Next: {stepMeta[index + 1].title}
