@@ -91,7 +91,7 @@ function App() {
               key={step.category}
             >
               <button
-                className="w-full border-0 bg-transparent p-6 text-left text-inherit max-[760px]:p-4.25"
+                className="w-full border-0 bg-transparent p-3.5 text-left text-inherit max-[760px]:p-4.25"
                 onClick={() => setOpenStep(open ? 0 : number)}
                 aria-expanded={open}
               >
