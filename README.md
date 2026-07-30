@@ -13,7 +13,7 @@ A React + TypeScript + Tailwind CSS prototype for building a customizable home s
 ## Installation
 
 Clone the repository:
-**git clone <repository-url>**
+**git clone "repository-url"**
 
 Install dependencies:
 **npm install**
