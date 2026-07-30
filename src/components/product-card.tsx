@@ -81,11 +81,11 @@ export default function ProductCard({
             {product.variants.map((option) => (
               <button
                 key={option.id}
-                className={`inline-flex items-center rounded border px-1 py-0.5 text-xs hover:bg-[#f8f8fa] transition-all ${activeVariant === option.id ? "border-[#267d7d] bg-[#effafa]" : "border-[#dedde3] bg-white text-[#4d4858]"}`}
+                className={`inline-flex items-center rounded border px-1 py-0.5 text-xs font-medium hover:bg-[#f8f8fa] transition-all ${activeVariant === option.id ? "border-[#267d7d] bg-[#effafa]" : "border-[#dedde3] bg-white text-[#4d4858]"}`}
                 onClick={() => onVariant(option.id)}
               >
                 <img
-                  className="h-7 w-7 object-contain"
+                  className="h-7 w-7 object-contain me-1"
                   src={option.image}
                   alt=""
                 />
