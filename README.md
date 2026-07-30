@@ -1,4 +1,4 @@
-# Security System Builder
+# Bundle builder Task
 
 A React + TypeScript + Tailwind CSS prototype for building a customizable home security system.
 
