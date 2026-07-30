@@ -95,7 +95,7 @@ function App() {
                 onClick={() => setOpenStep(open ? 0 : number)}
                 aria-expanded={open}
               >
-                <span className="block text-xs uppercase tracking-widest text-[#484848]">
+                <span className="block text-xs font-medium uppercase tracking-widest text-[#484848]">
                   Step {number} of 4
                 </span>
                 <span className="my-3 -mx-6 block h-px bg-[#dcdbe1] max-[760px]:-mx-4.25" />
@@ -110,7 +110,7 @@ function App() {
                   </span>
                   <span className="flex items-center gap-2 text-[#4e27a8]">
                     {open && (
-                      <span className="text-sm">
+                      <span className="text-sm font-medium">
                         {selectedCount(step.category)} selected
                       </span>
                     )}
@@ -126,7 +126,11 @@ function App() {
                   </span>
                 </span>
               </button>
-              {open && (
+              <div
+                className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                  open ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"
+                }`}
+              >
                 <div className="px-6 pb-6 max-[760px]:px-3.25">
                   <div className="grid grid-cols-2 gap-3.5 max-[1100px]:grid-cols-1">
                     {stepProducts.map((product) => (
@@ -147,6 +151,7 @@ function App() {
                       />
                     ))}
                   </div>
+
                   {number < 4 && (
                     <button
                       className="mx-auto mt-3.5 block rounded-[7px] border border-primary hover:bg-gray-300/50 transition-all px-6 py-2 text-lg font-semibold text-primary"
@@ -156,7 +161,7 @@ function App() {
                     </button>
                   )}
                 </div>
-              )}
+              </div>
             </section>
           );
         })}

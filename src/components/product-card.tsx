@@ -57,7 +57,7 @@ export default function ProductCard({
           {product.title}
         </h3>
         {product.description && (
-          <p className="text-sm text-[#666274]">
+          <p className="text-xs font-medium text-[#1F1F1FBF]">
             {product.description}{" "}
             <a
               className="whitespace-nowrap text-xs text-[#0000EE] underline"

@@ -29,13 +29,13 @@ export default function ReviewPanel({
 
   return (
     <aside className="mt-3 sticky top-6 rounded-lg bg-[#f0f5ff] p-5 max-[760px]:static max-[760px]:w-full max-[400px]:rounded-none max-[400px]:mt-0">
-      <span className="block text-xs uppercase tracking-widest text-[#484848]">
+      <span className="text-xs font-medium uppercase tracking-widest text-[#484848]">
         Review
       </span>
       <h1 className="mt-5 mb-1.5 text-xl font-semibold">
         Your security system
       </h1>
-      <p className="text-sm text-[#6b6877]">
+      <p className="text-sm font-medium text-[#6b6877]">
         Review your personalized protection system designed to keep what matters
         most safe.
       </p>
@@ -70,7 +70,7 @@ export default function ReviewPanel({
                       src={variant?.image ?? product.image}
                       alt=""
                     />
-                    <p className="min-w-0 text-sm">
+                    <p className="min-w-0 text-sm font-medium">
                       {product.title}
                       {variant && ` (${variant.label})`}
                     </p>
@@ -112,7 +112,7 @@ export default function ReviewPanel({
               alt=""
               className="bg-white rounded-md p-2"
             />
-            <span>Fast Shipping</span>
+            <span className="font-medium">Fast Shipping</span>
           </div>
 
           <div className="grid">
@@ -128,7 +128,7 @@ export default function ReviewPanel({
           <div className="flex items-end justify-between font-bold mt-2.5">
             <img src="./logo.png" alt="" width={78} height={78} />
             <div>
-              <p className="w-fit justify-self-end mt-1 mb-4 text-xs text-white bg-primary rounded-sm py-1 px-2">
+              <p className="w-fit justify-self-end mt-1 mb-4 text-xs font-medium text-white bg-primary rounded-sm py-1 px-2">
                 as low as ${(total / 12).toFixed(2)}/mo
               </p>
               <span className="flex flex-row gap-2">
